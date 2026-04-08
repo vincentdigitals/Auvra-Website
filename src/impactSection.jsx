@@ -1,16 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// --- CUSTOM HOOK FOR COUNTING NUMBERS (NOW WITH SCROLL SENSOR) ---
+// --- CUSTOM HOOK FOR COUNTING NUMBERS (WITH SCROLL SENSOR) ---
 const AnimatedCounter = ({ target, duration = 600 }) => {
   const [count, setCount] = useState(0);
-  const countRef = useRef(null); // The sensor
-  const [hasAnimated, setHasAnimated] = useState(false); // Locks it so it only animates once
+  const countRef = useRef(null); 
+  const [hasAnimated, setHasAnimated] = useState(false); 
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
-        // Fire the animation only when visible and hasn't animated yet
         if (entry.isIntersecting && !hasAnimated) {
           setHasAnimated(true);
 
@@ -27,7 +26,7 @@ const AnimatedCounter = ({ target, duration = 600 }) => {
           requestAnimationFrame(animateCount);
         }
       },
-      { threshold: 0.5 } // Triggers when 50% of the number is on screen
+      { threshold: 0.5 } 
     );
 
     if (countRef.current) {
@@ -43,9 +42,50 @@ const AnimatedCounter = ({ target, duration = 600 }) => {
 };
 
 export default function ImpactSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const carouselImages = [
+    "/li.clone-item3.png",   
+    "/li.clone-item3.png",  
+    "/li.clone-item3.png"   
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === carouselImages.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1));
+  };
+
   return (
     <section className="w-full bg-white text-gray-900 py-20 px-6 flex flex-col items-center overflow-hidden">
       
+      {/* =========================================
+          PURE CSS 3D SPINNING EARTH STYLES
+      ========================================= */}
+      <style>{`
+        @keyframes spinEarth {
+          0% { background-position: 0 0; }
+          100% { background-position: 200% 0; }
+        }
+        .real-3d-globe {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          /* Unblocked, reliable Github raw image link! */
+          background-image: url('world-map.avif');
+          background-size: 200% 100%;
+          background-repeat: repeat-x;
+          /* 3D internal shadows to make the flat image look like a perfect 3D sphere */
+          box-shadow: 
+            inset -20px -20px 40px rgba(0,0,0,0.8), 
+            inset 10px 10px 30px rgba(255,255,255,0.3),
+            0 10px 30px rgba(0,0,0,0.15);
+          animation: spinEarth 25s linear infinite;
+        }
+      `}</style>
+
       {/* =========================================
           SECTION 1: THE CAROUSEL
       ========================================= */}
@@ -57,7 +97,6 @@ export default function ImpactSection() {
           How people use <br /> Auvra every day
         </h2>
         
-        {/* Rating */}
         <div className="flex items-center gap-2 mb-10 text-sm">
           <span className="font-bold font-clash">4.8/5</span>
           <div className="flex text-yellow-400 text-xs">
@@ -66,27 +105,34 @@ export default function ImpactSection() {
           <span className="text-gray-500 font-clash">(Trusted by 10.0k+ people)</span>
         </div>
 
-        {/* Carousel Card */}
         <div className="relative w-full aspect-[4/5] bg-gray-200 rounded-[2rem] overflow-hidden shadow-xl mb-8">
-          <img 
-            src="/section.png" 
-            alt="People working out" 
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-         
+          {carouselImages.map((img, index) => (
+            <img 
+              key={index}
+              src={img} 
+              alt={`Auvra showcase ${index + 1}`} 
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${
+                index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
+              }`}
+            />
+          ))}
         </div>
 
-        {/* Carousel Navigation Arrows */}
         <div className="flex gap-4">
-          <button className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-gray-200 transition">
+          <button 
+            onClick={prevSlide}
+            className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-gray-200 transition active:scale-95"
+          >
             ←
           </button>
-          <button className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-800 hover:bg-gray-200 transition">
+          <button 
+            onClick={nextSlide}
+            className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-800 hover:bg-gray-200 transition active:scale-95"
+          >
             →
           </button>
         </div>
       </div>
-
 
       {/* =========================================
           SECTION 2: THE GLOBE & STATS
@@ -99,7 +145,6 @@ export default function ImpactSection() {
           How culture stays <br /> alive on Auvra
         </h2>
 
-        {/* Stat 1: Languages */}
         <div className="mb-8 relative">
           <h3 className="font-clash text-[5.5rem] font-medium leading-none text-[#FF5A1F] drop-shadow-[0_0_20px_rgba(255,90,31,0.4)]">
             <AnimatedCounter target={100} />+
@@ -107,17 +152,12 @@ export default function ImpactSection() {
           <p className="text-gray-600 font-medium text-lg mt-2">Languages documented</p>
         </div>
 
-        {/* The Earth Image */}
-        <div className="w-full max-w-[350px] aspect-square my-7">
-          <img 
-            src="/earth2.png" 
-            alt="3D Earth" 
-            className="w-full h-full object-contain drop-shadow-2xl"
-          />
+        {/* THE NEW REAL 3D SPINNING EARTH */}
+        <div className="w-full max-w-[320px] aspect-square my-10 relative">
+          <div className="real-3d-globe"></div>
         </div>
 
-        {/* Stat 2: Verification */}
-        <div className="mb-16">
+        <div className="mb-16 mt-6">
           <h3 className="font-clash text-5xl font-medium leading-none text-gray-900">
             <AnimatedCounter target={94} /><span className="text-purple-600">%</span>
           </h3>
@@ -126,7 +166,6 @@ export default function ImpactSection() {
           </p>
         </div>
 
-        {/* Stat 3: Elders */}
         <div className="mb-16">
           <h3 className="font-clash text-5xl font-medium leading-none text-gray-900">
             <AnimatedCounter target={52} /><span className="text-blue-500">+</span>
@@ -136,7 +175,6 @@ export default function ImpactSection() {
           </p>
         </div>
 
-        {/* Stat 4: Contributors */}
         <div className="mb-10">
           <h3 className="font-clash text-5xl font-medium leading-none text-gray-900">
             <AnimatedCounter target={87} /><span className="text-purple-600">%</span>

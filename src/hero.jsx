@@ -5,7 +5,6 @@ const Hero = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // 1. Existing effect for the floating nav bar
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -19,24 +18,20 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 2. NEW EFFECT: Lock the background scroll when menu is open!
   useEffect(() => {
     if (isMenuOpen) {
-      // Freeze the background
       document.body.style.overflow = 'hidden';
     } else {
-      // Unfreeze when closed
       document.body.style.overflow = 'unset';
     }
 
-    // Cleanup function just in case
     return () => {
       document.body.style.overflow = 'unset';
     };
   }, [isMenuOpen]);
 
   return (
-    <div className="relative min-h-screen overflow-hidden font-clash text-black">
+    <div className="relative min-h-screen overflow-hidden font-clash text-black w-full">
 
       {/* Background Image */}
       <img 
@@ -48,9 +43,9 @@ const Hero = () => {
       {/* Light Frosted Glass Overlay */}
       <div className="absolute inset-0 bg-white/20 z-0"></div>
 
-      {/* Ultra-Modern Floating Island Navigation */}
+      {/* Ultra-Modern Floating Island Navigation (BUG FIXED HERE) */}
       <nav 
-        className={`fixed z-40 flex justify-between items-center px-4 py-2 shadow-sm transition-all duration-300 ease-in-out left-0 right-0 mx-auto max-w-5xl w-[calc(100%-1.5rem)] sm:w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] rounded-2xl
+        className={`fixed z-40 flex justify-between items-center px-4 py-2 shadow-sm transition-all duration-300 ease-in-out left-4 right-4 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-5xl rounded-2xl
           ${isScrolled 
             ? 'top-3 sm:top-4 bg-white/70 backdrop-blur-md border border-white/40 shadow-lg' 
             : 'top-5 sm:top-6 bg-white/90 border border-gray-100'
@@ -84,24 +79,19 @@ const Hero = () => {
 
       {/* Main Hero Content */}
       <main className="relative z-20 flex flex-col items-center text-center px-4 sm:px-6 mt-42 sm:mt-40 md:mt-48 text-black max-w-4xl mx-auto">
-        
-        {/* Glassmorphism Pill Badge */}
         <div className="flex items-center gap-3 px-1 py-1 pr-4 rounded-full bg-white/10 backdrop-blur-md text-white mb-6 shadow-sm border border-white/10">
           <span className="bg-black text-white px-3 py-1 rounded-full text-md font-medium">New</span>
           <span className="text-sm font-medium tracking-wide">A new way to preserve culture</span>
         </div>
 
-        {/* Heading */}
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4 max-w-lg text-white">
           The permanent home for <span className="text-[#FBBF24] font-damion font-normal italic text-[0.85em] tracking-wide drop-shadow-sm">human </span> culture
         </h1>
         
-        {/* Subheading */}
         <p className="text-md text-white/90 mb-4 max-w-sm font-medium leading-snug">
           Preserve traditions, own your creations, and pass down what matters all in one place.
         </p>
 
-        {/* Glassmorphism CTA Button */}
         <button className="px-8 mt-6 rounded-full bg-white/10 h-[40px] backdrop-blur-md text-white text-md font-medium hover:bg-white/20 transition-all border border-white/20 shadow-sm">
           Start preserving
         </button>
@@ -109,10 +99,8 @@ const Hero = () => {
 
       {/* Bottom Mockups */}
       <div className="relative z-20 mt-6 sm:mt-12 w-full max-w-5xl mx-auto flex justify-center items-end h-[30rem] sm:h-[32rem] md:h-[35rem] px-4"> 
-        
         <div className="relative flex justify-center w-[240px] sm:w-[280px] md:w-[300px]">
           
-          {/* LEFT CARD */}
           <div className="absolute left-[-12%] -translate-x-1/2 top-[45%] md:top-[40%] -translate-y-1/2 w-25 sm:w-40 md:w-44 bg-gradient-to-b from-[#A3A3A3] to-[#444343] rounded-2xl border border-gray-300 p-3 sm:p-4 flex flex-col items-center justify-center z-30 shadow-xl transition-transform duration-300 hover:scale-105">
              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#F59E0B] rounded-full flex items-center justify-center mb-2 sm:mb-3 shadow-inner">
                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 sm:w-5 sm:h-5 text-white">
@@ -123,9 +111,7 @@ const Hero = () => {
              <p className="text-[9px] sm:text-[10px] text-white text-center leading-tight">7-day preservation streak</p>
           </div>
 
-          {/* CENTER PHONE */}
           <div className="w-full h-[350px] md:h-[400px] bg-gradient-to-b bg-white/10 backdrop-blur-md from-[#A3A3A3] to-[#444343] rounded-t-[2.5rem] py-4 px-4 md:px-5 flex flex-col relative z-20 translate-y-8 shadow-2xl overflow-hidden border border-white/20">
-             
              <div className="w-16 h-1.5 bg-[#444343] rounded-full mx-auto mb-6"></div>
              
              <div className="flex justify-between items-center text-white text-[13px] mb-6 sm:mb-8 md:mb-10 px-1 font-semibold">
@@ -142,7 +128,6 @@ const Hero = () => {
              </div>
 
              <div className="w-full flex-1 rounded-2xl bg-white/20 border border-white/20 relative p-3 backdrop-blur-md shadow-inner flex flex-col">
-               
                <div className="flex justify-between items-center mb-1">
                   <div className="text-[10px] text-white">Your Cultural Orbit</div>
                   <div className=" px-2 py-0.5 rounded-full text-[7px] text-blue-800 bg-blue-400">10k</div>
@@ -153,7 +138,6 @@ const Hero = () => {
                <div className="text-green-800 text-xl font-medium flex items-center gap-1 mb-2">18.2k <span className="text-[7px] font-medium text-white/60 mt-1">witnesses</span></div>
                
                <div className="absolute inset-x-0 bottom-4 h-32 flex justify-center items-center pointer-events-none">
-                  
                   <svg viewBox="0 0 100 100" className="absolute w-full h-full stroke-white/20 fill-none">
                     <circle cx="50" cy="50" r="20" strokeDasharray="2 2" />
                     <circle cx="50" cy="50" r="30" strokeDasharray="2 2" />
@@ -179,7 +163,6 @@ const Hero = () => {
              </div>
           </div>
 
-          {/* RIGHT CARD */}
           <div className="absolute right-0 translate-x-1/2 top-[35%] md:top-[30%] -translate-y-1/2 w-36 sm:w-40 md:w-44 p-3 sm:p-4 bg-[#141414] rounded-2xl border border-gray-800 flex flex-col z-30 shadow-xl transition-transform duration-300 hover:scale-105">
               <p className="text-[10px] text-white/90 text-center mb-3 leading-tight">Today's goal: 3 oral histories</p>
               <div className="flex justify-between px-1 mb-1">
@@ -205,36 +188,22 @@ const Hero = () => {
                 <span className="text-[8px] text-white/50">94%</span>
               </div>
           </div>
-
         </div>
       </div>
       
-      {/* =========================================
-          NEW: BLURRED MENU OVERLAY
-      ========================================= */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-[100] flex flex-col items-center px-4 py-3 sm:py-5">
-          
-          {/* The Blurred Backdrop */}
           <div 
             className="absolute inset-0 bg-black/40 backdrop-blur-md transition-all"
             onClick={() => setIsMenuOpen(false)}
           ></div>
 
-          {/* 1. The Top Header Pill */}
           <div className="relative z-10 w-full max-w-5xl bg-white rounded-2xl flex items-center justify-between px-4 py-2 shadow-lg mb-4">
-            
-            {/* Logo */}
             <div className="flex items-center gap-3 font-medium text-lg sm:text-xl tracking-wide text-black">
-              <img 
-                 src="/Vector .png" 
-                 alt="Auvra Logo" 
-                 className="w-8 h-8 object-contain" 
-                 />
-                 Auvra
+              <img src="/Vector .png" alt="Auvra Logo" className="w-8 h-8 object-contain" />
+              Auvra
             </div>
 
-            {/* Action Icons & Close Button */}
             <div className="flex items-center gap-2">
               <button className="w-10 h-10 bg-gray-100 text-black rounded-xl flex items-center justify-center hover:bg-gray-200 transition">
                 <FaAppStore className="text-lg" />
@@ -242,7 +211,6 @@ const Hero = () => {
               <button className="w-10 h-10 bg-gray-100 text-black rounded-xl flex items-center justify-center hover:bg-gray-200 transition">
                 <FaGooglePlay className="text-lg font-bold" />
               </button>
-              {/* Close 'X' Button */}
               <button 
                 onClick={() => setIsMenuOpen(false)}
                 className="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-gray-200 transition text-black"
@@ -254,7 +222,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* 2. The Dropdown Menu Box */}
           <div className="relative z-10 w-full max-w-5xl bg-white rounded-[2rem] p-6 shadow-xl flex flex-col gap-6">
             <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-500 transition">Ask Lens AI</a>
             <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-500 transition">Features</a>
@@ -262,7 +229,6 @@ const Hero = () => {
             <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-500 transition">Blog</a>
             <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-500 transition">Careers</a>
           </div>
-
         </div>
       )}
 
