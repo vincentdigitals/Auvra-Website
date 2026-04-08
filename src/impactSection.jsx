@@ -50,7 +50,7 @@ export default function ImpactSection() {
           SECTION 1: THE CAROUSEL
       ========================================= */}
       <div className="max-w-md w-full flex flex-col items-center mb-32">
-        <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4 border border-gray-200 rounded-full px-4 py-1">
+        <span className="text-xs font-medium font-clash uppercase tracking-widest text-gray-400 mb-4 border border-gray-200 rounded-full px-4 py-1">
           A shared task
         </span>
         <h2 className="font-clash text-4xl font-medium text-center leading-tight mb-2">
@@ -59,11 +59,11 @@ export default function ImpactSection() {
         
         {/* Rating */}
         <div className="flex items-center gap-2 mb-10 text-sm">
-          <span className="font-bold">4.8/5</span>
+          <span className="font-bold font-clash">4.8/5</span>
           <div className="flex text-yellow-400 text-xs">
             ★★★★★
           </div>
-          <span className="text-gray-500">(Trusted by 10.0k+ people)</span>
+          <span className="text-gray-500 font-clash">(Trusted by 10.0k+ people)</span>
         </div>
 
         {/* Carousel Card */}
