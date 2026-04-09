@@ -1,5 +1,6 @@
 import React from 'react';
-import { Briefcase, Users, Monitor, User, Landmark } from 'lucide-react';
+// IMPORTED ALL THE CORRECT UNIQUE ICONS HERE
+import { Palette, Users, Archive, Home, User, Landmark } from 'lucide-react';
 
 const AudienceSection = () => {
   return (
@@ -21,19 +22,19 @@ const AudienceSection = () => {
         Designed for the people who create, protect, and remember
       </h2>
 
-      {/* 3. ICON BUTTONS CLUSTER */}
+      {/* 3. ICON BUTTONS CLUSTER (FIXED UNIQUE ICONS) */}
       <div className="grid grid-cols-2 justify-center gap-4 max-w-2xl font-sans bg-white/50 backdrop-blur-sm p-4 rounded-3xl z-10 mb-20">
         <button className="flex items-center gap-2.5 px-6 py-3 rounded-xl border border-gray-900 text-gray-900 font-medium hover:bg-gray-50 transition bg-white shadow-sm">
-          <Briefcase className="w-5 h-5" /> Creators
+          <Palette className="w-5 h-5" /> Creators
         </button>
         <button className="flex items-center gap-2.5 px-6 py-3 rounded-xl border border-gray-200 text-gray-600 font-medium hover:bg-gray-50 transition bg-white shadow-sm">
           <Users className="w-5 h-5" /> Communities
         </button>
         <button className="flex items-center gap-2.5 px-6 py-3 rounded-xl bg-gray-50 text-gray-700 font-medium hover:bg-gray-100 transition border border-transparent">
-          <Monitor className="w-5 h-5" /> Collectors
+          <Archive className="w-5 h-5" /> Collectors
         </button>
         <button className="flex items-center gap-2.5 px-6 py-3 rounded-xl border border-gray-200 border-dashed text-gray-600 font-medium hover:bg-gray-50 transition bg-white shadow-sm">
-          <Users className="w-5 h-5" /> Families
+          <Home className="w-5 h-5" /> Families
         </button>
         <button className="flex items-center gap-2.5 px-6 py-3 rounded-xl border border-gray-200 text-gray-600 font-medium hover:bg-gray-50 transition bg-white shadow-sm">
           <User className="w-5 h-5" /> Individuals
@@ -44,7 +45,6 @@ const AudienceSection = () => {
       </div>
 
       {/* 4. THE GLASSMORPHISM SHOWCASE */}
-      {/* THE FIX: Changed max-w-5xl to max-w-[420px] to keep it strictly portrait-sized! */}
       <div className="relative w-full max-w-[420px] h-[550px] md:h-[650px] mx-auto rounded-[2.5rem] overflow-hidden shadow-2xl z-10">
         
         {/* Background Image */}
@@ -55,7 +55,6 @@ const AudienceSection = () => {
         />
 
         {/* The Frosted Glass Card */}
-        {/* THE FIX: Removed the md: positioning rules so it stretches perfectly across the bottom on ALL screens */}
         <div className="absolute bottom-2  w-[220px] h-[200px] right-6 bg-black/20 backdrop-blur-xl border border-white/20 p-6 md: rounded-3xl shadow-2xl text-white">
           
           <p className="font-medium text-md  leading-snug mb-6 ">
