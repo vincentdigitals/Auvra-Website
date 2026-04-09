@@ -10,16 +10,20 @@ const LivingRecordsSection = () => {
           Build living
           {/* UPDATED: Cyclist Pill - Responsive sizing and vertical alignment */}
           <span className="inline-block w-16 h-8 md:w-24 md:h-12 lg:w-28 lg:h-14 bg-orange-200 rounded-full align-middle mx-2 md:mx-3 overflow-hidden shadow-inner -translate-y-1">        
-             <img src="One.png" alt="Cyclist" className="w-full h-full object-cover opacity-80" />
+            <video
+              src="video.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="inline-block h-6 md:h-8 lg:h-10 w-auto align-middle mx-2 md:mx-3 drop-shadow-md -translate-y-1"
+            />
           </span>
           records of <span className="font-medium">culture that connect stories</span> people, and
           {/* UPDATED: Diamond Image - Explicit smaller responsive heights */}
-          <video
-            src="video.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
+          <img
+            alt="Diamond"
+            src="Vector.png"
             className="inline-block h-6 md:h-8 lg:h-10 w-auto align-middle mx-2 md:mx-3 drop-shadow-md -translate-y-1"
           />
           meaning across generations.
