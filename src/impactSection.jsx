@@ -74,7 +74,7 @@ export default function ImpactSection() {
           height: 100%;
           border-radius: 50%;
           /* Unblocked, reliable Github raw image link! */
-          background-image: url('world-map.avif');
+          background-image: url('earth-ball');
           background-size: 200% 100%;
           background-repeat: repeat-x;
           /* 3D internal shadows to make the flat image look like a perfect 3D sphere */
