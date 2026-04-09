@@ -43,11 +43,14 @@ const Hero = () => {
       {/* Light Frosted Glass Overlay */}
       <div className="absolute inset-0 bg-white/20 z-0"></div>
 
-      {/* Ultra-Modern Floating Island Navigation (BUG FIXED HERE) */}
+      {/* =========================================
+          ULTRA-MODERN FLOATING NAV (FIXED LAYOUT)
+      ========================================= */}
+      {/* Notice the z-[110] so it ALWAYS stays above the blurred menu backdrop */}
       <nav 
-        className={`fixed z-40 flex justify-between items-center px-4 py-2 shadow-sm transition-all duration-300 ease-in-out left-4 right-4 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-5xl rounded-2xl
-          ${isScrolled 
-            ? 'top-3 sm:top-4 bg-white/70 backdrop-blur-md border border-white/40 shadow-lg' 
+        className={`fixed z-[110] flex justify-between items-center px-4 py-2 shadow-sm transition-all duration-300 ease-in-out left-0 right-0 mx-auto w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] max-w-5xl rounded-2xl
+          ${isScrolled || isMenuOpen
+            ? 'top-5 sm:top-6 bg-white/80 backdrop-blur-md border border-white/40 shadow-lg' 
             : 'top-5 sm:top-6 bg-white/90 border border-gray-100'
           }`}
       >
@@ -67,12 +70,16 @@ const Hero = () => {
           <button className="w-10 h-10 bg-gray-200 text-black rounded-xl flex items-center justify-center hover:bg-gray-100 transition ">
             <FaGooglePlay className="text-lg font-bold" />
           </button>
+          
+          {/* ANIMATED HAMBURGER / X BUTTON */}
           <button 
-            onClick={() => setIsMenuOpen(true)}
-            className="w-10 h-10 bg-gray-200 rounded-xl flex flex-col justify-center items-center gap-1 hover:bg-gray-100 transition "
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="w-10 h-10 bg-gray-200 rounded-xl flex flex-col justify-center items-center hover:bg-gray-100 transition relative"
           >
-            <div className="w-4 h-0.5 bg-black"></div>
-            <div className="w-4 h-0.5 bg-black"></div>
+            {/* Top Line */}
+            <div className={`w-6 h-0.5 bg-black transition-all duration-300 absolute ${isMenuOpen ? 'rotate-45' : '-translate-y-1'}`}></div>
+            {/* Bottom Line */}
+            <div className={`w-6 h-0.5 bg-black transition-all duration-300 absolute ${isMenuOpen ? '-rotate-45' : 'translate-y-1'}`}></div>
           </button>
         </div>
       </nav>
@@ -191,38 +198,18 @@ const Hero = () => {
         </div>
       </div>
       
+      {/* =========================================
+          REFINED BLURRED MENU OVERLAY
+      ========================================= */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-[100] flex flex-col items-center px-4 py-3 sm:py-5">
+        <div className="fixed inset-0 z-[100] flex flex-col items-center px-4 pt-24 pb-5">
           <div 
             className="absolute inset-0 bg-black/40 backdrop-blur-md transition-all"
             onClick={() => setIsMenuOpen(false)}
           ></div>
 
-          <div className="relative z-10 w-full max-w-5xl bg-white rounded-2xl flex items-center justify-between px-4 py-2 shadow-lg mb-4">
-            <div className="flex items-center gap-3 font-medium text-lg sm:text-xl tracking-wide text-black">
-              <img src="/Vector .png" alt="Auvra Logo" className="w-8 h-8 object-contain" />
-              Auvra
-            </div>
-
-            <div className="flex items-center gap-2">
-              <button className="w-10 h-10 bg-gray-100 text-black rounded-xl flex items-center justify-center hover:bg-gray-200 transition">
-                <FaAppStore className="text-lg" />
-              </button>
-              <button className="w-10 h-10 bg-gray-100 text-black rounded-xl flex items-center justify-center hover:bg-gray-200 transition">
-                <FaGooglePlay className="text-lg font-bold" />
-              </button>
-              <button 
-                onClick={() => setIsMenuOpen(false)}
-                className="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-gray-200 transition text-black"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div className="relative z-10 w-full max-w-5xl bg-white rounded-[2rem] p-6 shadow-xl flex flex-col gap-6">
+          {/* The Dropdown Menu Box - Now sits perfectly below the main nav */}
+          <div className="relative z-10 w-full max-w-5xl bg-white rounded-[2rem] p-6 shadow-xl flex flex-col gap-6  md: animate-in fade-in slide-in-from-top-4 duration-200">
             <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-500 transition">Ask Lens AI</a>
             <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-500 transition">Features</a>
             <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-500 transition">Company</a>
