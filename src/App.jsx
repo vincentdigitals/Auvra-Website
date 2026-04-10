@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 // --- YOUR COMPONENT IMPORTS ---
-=======
->>>>>>> 146323faee2a291db941ace0a0dff2dcb88d05fe
 import Hero from './hero'
 import ProblemSection from './problemSection'
 import FeaturesSection from './featuresSection'
@@ -15,10 +12,8 @@ import PhotoStack from './photoStack'
 import VaultSection from './vaultSection'
 import Design from './design'
 import AudienceSection from './audienceSection'
-<<<<<<< HEAD
 import ImpactSection from './impactSection'
 import FaqAndCardsSection from './faqSection'
-import FooterSection from './footerSection'
 
 // --- YOUR LEGAL PAGE IMPORTS ---
 import PrivacyPolicy from './privacyPolicy'
@@ -83,10 +78,8 @@ function App() {
 }
 
 export default App
-=======
 import { FaAppStore, FaGooglePlay } from 'react-icons/fa';
 
-function App() {
   
 
   return (
@@ -105,4 +98,3 @@ function App() {
 }
 
 export default App
->>>>>>> 146323faee2a291db941ace0a0dff2dcb88d05fe
