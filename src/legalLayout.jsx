@@ -13,7 +13,7 @@ const LegalLayout = ({ children, currentPage }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col font-sans selection:bg-orange-200 selection:text-orange-900">
+    <div className="min-h-screen bg-white flex flex-col font-sans selection:bg-orange-200 selection:text-orange-900">
       
       {/* =========================================
           SIMPLE TOP LOGO NAV
@@ -22,7 +22,7 @@ const LegalLayout = ({ children, currentPage }) => {
         <img 
           src="/Vector .png" 
           alt="Auvra Logo" 
-          className="w-8 h-8 object-contain" 
+          className="w-6 h-6 object-contain" 
         />
         <span className="font-clash">Auvra</span>
       </div>
@@ -55,7 +55,7 @@ const LegalLayout = ({ children, currentPage }) => {
               <Link
                 key={item.id}
                 to={item.href}
-                className={`px-4 py-3 rounded-xl transition-all duration-200 font-medium text-sm border whitespace-nowrap flex-shrink-0 ${
+                className={`px-4 py-3 rounded-xl transition-all font-clash duration-200 font-medium text-sm border whitespace-nowrap flex-shrink-0 ${
                   currentPage === item.id
                     ? 'bg-white border-gray-200 text-gray-900 shadow-sm'
                     : 'border-transparent text-gray-500 hover:bg-gray-100 hover:text-gray-900'
