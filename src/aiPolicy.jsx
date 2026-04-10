@@ -4,7 +4,7 @@ import LegalLayout from './legalLayout';
 export default function AIPolicy() {
   return (
     <LegalLayout currentPage="ai">
-      <div className="prose prose-gray max-w-none">
+      <div className="prose prose-gray max-w-none font-clash">
         
         <h2 className="text-3xl font-clash font-medium text-gray-900 mb-2">AI Policy</h2> {/* [cite: 219] */}
         <p className="text-sm text-gray-500 mb-8 pb-8 border-b border-gray-100">

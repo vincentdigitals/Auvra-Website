@@ -4,7 +4,7 @@ import LegalLayout from './legalLayout';
 export default function PrivacyPolicy() {
   return (
     <LegalLayout currentPage="privacy">
-      <div className="prose prose-gray max-w-none">
+      <div className="prose prose-gray max-w-none font-clash">
         
         {/* Document Title */}
         <h2 className="text-3xl font-clash font-medium text-gray-900 mb-2">Privacy Policy</h2>
