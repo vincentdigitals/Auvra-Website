@@ -1,5 +1,5 @@
 import React from 'react';
-import LegalLayout from './LegalLayout';
+import LegalLayout from './legalLayout';
 
 export default function PrivacyPolicy() {
   return (
