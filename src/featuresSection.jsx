@@ -49,7 +49,7 @@ const FeaturesSection = () => {
           {/* THE FIX: Added max-w-[340px] and mx-auto so it stays phone-sized! */}
           <div className="w-full max-w-[340px] mx-auto mt-auto bg-black rounded-3xl overflow-hidden relative h-[380px] shadow-lg">
             <img 
-              src="/Frame 2609176.png" 
+              src="/framer.png" 
               alt="Dancer" 
               className="w-full h-full object-cover opacity-90"
             />
@@ -63,20 +63,7 @@ const FeaturesSection = () => {
                  <MoreHorizontal className="w-5 h-5" />
                </div> */}
             </div>
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/80 to-transparent pt-12 pb-6 px-5 flex flex-col justify-end">
-               <h4 className="text-white text-2xl font-bold mb-1 flex items-center gap-2">
-                 Afro-futurism <span className="text-indigo-400 text-sm">★</span>
-               </h4>
-               <p className="text-white/70 text-xs mb-4 font-sans">Celebrate the past, define the future</p>
-               <div className="flex gap-2">
-                 <button className="flex-1 py-2.5 bg-white/10 backdrop-blur-md rounded-xl text-white text-xs font-semibold border border-white/20 flex justify-center items-center gap-2">
-                   <Crown className="w-3 h-3 text-yellow-500" /> 129k Honors
-                 </button>
-                 <button className="flex-1 py-2.5 bg-white/10 backdrop-blur-md rounded-xl text-white text-xs font-semibold border border-white/20">
-                   Claim Badge
-                 </button>
-               </div>
-            </div>
+            
           </div>
         </div>
 

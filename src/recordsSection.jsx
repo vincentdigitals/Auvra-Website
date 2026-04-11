@@ -64,12 +64,11 @@ const LivingRecordsSection = () => {
         {/* Central Phone Mockup - Static */}
         <div className="relative z-20">
           <img
-            src="Screen.jpg"
+            src="phone.png"
             alt="Auvra Mobile App"
-            className="border-[5px] border-black rounded-[2.5rem] bg-white w-[250px] sm:w-[280px] md:w-[320px] h-[500px] sm:h-[580px] md:h-[650px] object-cover drop-shadow-2xl"
+            className=" rounded-[2.5rem]  w-[250px] sm:w-[280px] md:w-[320px] h-[500px] sm:h-[580px] md:h-[650px] object-cover drop-shadow-2xl"
           />
-          {/* iPhone Notch */}
-          <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-24 sm:w-28 md:w-32 h-6 sm:h-7 bg-black rounded-b-2xl rounded-t-sm z-10 shadow-lg"></div>
+          
         </div>
 
         {/* FLOATING CARDS */}    
