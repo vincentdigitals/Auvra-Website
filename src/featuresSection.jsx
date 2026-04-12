@@ -47,7 +47,7 @@ const FeaturesSection = () => {
           </p>
           
           {/* THE FIX: Added max-w-[340px] and mx-auto so it stays phone-sized! */}
-          <div className="w-full max-w-[340px] mx-auto mt-auto bg-black rounded-3xl overflow-hidden relative h-[380px] shadow-lg">
+          <div className="w-full max-w-[340px] mx-auto mt-auto bg-black rounded-3xl overflow-hidden relative shadow-lg">
             <img 
               src="/framer.png" 
               alt="Dancer" 
