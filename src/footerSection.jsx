@@ -43,7 +43,7 @@ export default function FooterSection() {
           </p>
           
           {/* Input Field */}
-          <div className="flex items-center bg-gray-100 rounded-xl p-1.5 border border-transparent focus-within:border-gray-300 transition-colors">
+          <div className="flex items-center bg-gray-100 rounded-xl p-1.5 border border-transparent focus-within:border-gray-300 transition-colors" id="contact">
             <input 
               type="email" 
               placeholder="Email" 
@@ -66,7 +66,7 @@ export default function FooterSection() {
           <div className="flex items-center gap-2 mb-4">
             {/* Auvra Star Logo Icon */}
             <img 
-             src="/Vector .png" 
+             src="/Vector.png" 
              alt="Auvra Logo" 
              className="w-8 h-8 object-contain" 
              />
@@ -84,8 +84,8 @@ export default function FooterSection() {
           {/* Column 1 */}
           <div className="flex flex-col gap-4 font-clash">
             <h4 className="text-[15px] font-medium tracking-widest text-gray-400 uppercase">Company</h4>
-            <a href="#" className="text-sm text-gray-800 hover:text-black transition">About</a>
-            <a href="#" className="text-sm text-gray-800 hover:text-black transition">Blog</a>
+            <a href="/#about" className="text-sm text-gray-800 hover:text-black transition">About</a>
+            <a href="/#blog" className="text-sm text-gray-800 hover:text-black transition">Blog</a>
           </div>
 
           {/* Column 2 - ROUTED */}
@@ -101,17 +101,16 @@ export default function FooterSection() {
           <div className="flex flex-col gap-4 font-clash">
             <h4 className="text-[15px] font-medium tracking-widest text-gray-400 uppercase">Trust & Safety</h4>
             <Link to="/community" className="text-sm text-gray-800 hover:text-black transition">Community Guidelines</Link>
-             <Link to="/governance" className="text-sm text-gray-800 hover:text-black transition">Content Governance</Link>
+            <Link to="/governance" className="text-sm text-gray-800 hover:text-black transition">Content Governance</Link>
             <Link to="/copyright" className="text-sm text-gray-800 hover:text-black transition">Copyright Policy</Link>
             <Link to="/ai-policy" className="text-sm text-gray-800 hover:text-black transition">AI Policy</Link>
-           
           </div>
 
-          {/* Column 4 */}
+          {/* Column 4 - FAQ & CONTACT ANCHORS ADDED */}
           <div className="flex flex-col gap-4 font-clash">
             <h4 className="text-[15px] font-medium tracking-widest text-gray-400 uppercase">Contact</h4>
-            <a href="#" className="text-sm text-gray-800 hover:text-black transition">Contact us</a>
-            <a href="#" className="text-sm text-gray-800 hover:text-black transition">FAQs</a>
+            <a href="/#contact" className="text-sm text-gray-800 hover:text-black transition">Contact us</a>
+            <a href="/#faq" className="text-sm text-gray-800 hover:text-black transition">FAQs</a>
             
             <h4 className="text-[10px] font-semibold tracking-widest text-gray-400 uppercase mt-4">Connect</h4>
             <div className="flex items-center gap-3">

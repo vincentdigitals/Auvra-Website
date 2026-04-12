@@ -51,7 +51,7 @@ const FeaturesSection = () => {
             <img 
               src="/framer.png" 
               alt="Dancer" 
-              className="w-full h-full object-cover opacity-90"
+              className="w-full h-full object-contain opacity-90"
             />
             <div className="absolute top-0 w-full p-4 flex justify-between items-center text-white z-10">
                {/* <div>

@@ -63,7 +63,7 @@ export default function FaqAndCardsSection() {
   };
 
   return (
-    <section className="w-full bg-white text-gray-900 py-20 px-4 md:px-8 flex flex-col items-center">
+    <section className="w-full bg-white text-gray-900 py-20 px-4 md:px-8 flex flex-col items-center" id="faq">
       <div className="max-w-xl w-full flex flex-col gap-24">
         
         {/* =========================================
