@@ -60,7 +60,7 @@ export default function FooterSection() {
 
         {/* =========================================
             SECTION 3: FOOTER BIO & LINKS
-        ========================================= */}
+        
         {/* Logo and Bio */}
         <div className="mb-10">
           <div className="flex items-center gap-2 mb-4">
