@@ -52,11 +52,11 @@ export default function ImpactSection() {
   ];
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === carouselImages.length - 1 ? 0 : prev + 1));
+    setCurrentSlide((prev) => (prev === carouselVideos.length - 1 ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1));
+    setCurrentSlide((prev) => (prev === 0 ? carouselVideos.length - 1 : prev - 1));
   };
 
   return (
