@@ -15,9 +15,7 @@ import {
   BadgeCheck,
   Volume2,
   ClipboardList,
-  Wallet,
-  Zap,
-  Lock
+  Wallet
 } from 'lucide-react';
 
 const FeaturesSection = () => {
