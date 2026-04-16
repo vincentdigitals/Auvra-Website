@@ -42,13 +42,13 @@ const FeaturesSection = () => {
             CARD 1: COLLECTIBLE BADGES
         ========================================= */}
 				<div className='bg-white rounded-[2rem] p-8 border border-gray-200 shadow-sm flex flex-col h-full text-center md:text-left'>
-					<div className='flex items-center justify-center md:justify-start gap- mb-4'>
+					<div className='flex items-center justify-center md:justify-start gap-2 mb-4'>
 						<Crown className='text-indigo-600 fill-indigo-600 w-6 h-6' />
 						<h3 className='text-xl font-semi-bold text-gray-900'>
 							Collectible Badges
 						</h3>
 					</div>
-					<p className='text-gray-600 font-clash text-sm mb-10 leading-relaxed text-justify'>
+					<p className='text-gray-600 font-clash text-md mb-10 leading-relaxed text-left'>
 						Turn your art, music, or crafts into verifiable digital badges. Set
 						your price, share its story, and earn from every sale with permanent
 						provenance without losing your ownership or creative control.
@@ -82,7 +82,7 @@ const FeaturesSection = () => {
 						<Crown className='text-yellow-500 fill-yellow-500 w-6 h-6' />
 						<h3 className='text-xl font-semi-bold'>Contribution Badges</h3>
 					</div>
-					<p className='text-gray-400 font-clash text-sm mb-10 leading-relaxed text-justify'>
+					<p className='text-gray-400 font-clash text-sm mb-10 leading-relaxed text-left'>
 						For knowledge that belongs to everyone. Language, oral histories,
 						rituals, traditions, and cultural artifacts shared by communities,
 						collectively verified, and preserved as a living archive for future
@@ -131,14 +131,14 @@ const FeaturesSection = () => {
 							</span>
 						</p>
 					</div>
-					<div className='flex flex-wrap gap-2'>
-						<span className='px-3 py-1.5 bg-neutral-800/80 rounded-full text-[10px] font-clash  bg-white/10 h-[40px] backdrop-blur-md text-white  font-medium hover:bg-white/20 transition-all border border-white/20 shadow-sm'>
+					<div className='flex flex-wrap gap-2 mt-3'>
+						<span className='px-3 py-1.5 bg-neutral-800/80 rounded-full text-md font-clash  bg-white/20 backdrop-blur-md text-white  font-medium hover:bg-white/20 transition-all border border-white/20 shadow-sm'>
 							Cultural Commons
 						</span>
-						<span className='px-3 py-1.5 bg-neutral-800/80 rounded-full text-[10px] font-clash  bg-white/10 h-[40px] backdrop-blur-md text-white  font-medium hover:bg-white/20 transition-all border border-white/20 shadow-sm'>
+						<span className='px-3 py-1.5 bg-neutral-800/80 rounded-full text-md font-clash  bg-white/20 backdrop-blur-md text-white  font-medium hover:bg-white/20 transition-all border border-white/20 shadow-sm'>
 							Community-Verified
 						</span>
-						<span className='px-3 py-1.5 bg-neutral-800/80 rounded-full text-[10px] font-clash  bg-white/10 h-[40px] backdrop-blur-md text-white  font-medium hover:bg-white/20 transition-all border border-white/20 shadow-sm'>
+						<span className='px-3 py-1.5 bg-neutral-800/80 rounded-full text-md font-clash  bg-white/20 backdrop-blur-md text-white  font-medium hover:bg-white/20 transition-all border border-white/20 shadow-sm'>
 							Living Archive
 						</span>
 					</div>
@@ -153,12 +153,12 @@ const FeaturesSection = () => {
 						<div className='w-8 h-8 flex items-center justify-center'>
 							<Zap className='w-6 h-6 text-yellow-500 fill-yellow-500' />
 						</div>
-						<h2 className='font-clash text-2xl font-medium text-gray-900'>
+						<h2 className='font-clash text-xl font-semi-bold text-gray-900'>
 							Collaboration Hub
 						</h2>
 					</div>
 
-					<p className='font-sans text-[15px] text-gray-700 leading-relaxed mb-10'>
+					<p className='font-clash text-[15px] text-gray-700 leading-relaxed mb-10'>
 						Create together with total clarity. Set ownership splits and usage
 						rights before a project starts. Revenue shares automatically, and
 						contributions stay transparent and fairly credited.
@@ -175,7 +175,7 @@ const FeaturesSection = () => {
 								<h3 className='font-clash text-[16px] font-medium text-gray-900 mb-1'>
 									Locked Agreements
 								</h3>
-								<p className='font-sans text-[13px] text-gray-500 leading-relaxed'>
+								<p className='font-clash text-[13px] text-gray-500 leading-relaxed'>
 									Ownership, rights, and contribution terms set upfront and
 									transparently recorded.
 								</p>
@@ -191,7 +191,7 @@ const FeaturesSection = () => {
 								<h3 className='font-clash text-[16px] font-medium text-gray-900 mb-1'>
 									Find Your Team
 								</h3>
-								<p className='font-sans text-[13px] text-gray-500 leading-relaxed'>
+								<p className='font-clash text-[13px] text-gray-500 leading-relaxed'>
 									Discover creators, communities, or experts to collaborate on
 									any project.
 								</p>
@@ -207,7 +207,7 @@ const FeaturesSection = () => {
 								<h3 className='font-clash text-[16px] font-medium text-gray-900 mb-1'>
 									Shared Workspace
 								</h3>
-								<p className='font-sans text-[13px] text-gray-500 leading-relaxed'>
+								<p className='font-clash text-[13px] text-gray-500 leading-relaxed'>
 									Tasks, files, and conversations in one clear, shared project
 									space.
 								</p>
@@ -223,7 +223,7 @@ const FeaturesSection = () => {
 								<h3 className='font-clash text-[16px] font-medium text-gray-900 mb-1'>
 									Flexible Value Sharing
 								</h3>
-								<p className='font-sans text-[13px] text-gray-500 leading-relaxed'>
+								<p className='font-clash text-[13px] text-gray-500 leading-relaxed'>
 									Distribute revenue when applicable, or ensure fair credit and
 									recognition for every contribution.
 								</p>
@@ -240,20 +240,20 @@ const FeaturesSection = () => {
 								<div className='w-2.5 h-2.5 rounded-full bg-yellow-400'></div>
 								<div className='w-2.5 h-2.5 rounded-full bg-green-400'></div>
 							</div>
-							<span className='font-sans text-[10px] font-medium text-gray-500'>
+							<span className='font-clash text-[10px] font-medium text-gray-500'>
 								Collaboration Hub
 							</span>
 						</div>
 
 						{/* Active Project Card */}
 						<div className='bg-[#D9D9D9]/50 rounded-2xl p-4'>
-							<p className='font-sans text-[9px] font-bold text-gray-500 tracking-wider mb-1'>
+							<p className='font-clash text-[9px] font-bold text-gray-500 tracking-wider mb-1'>
 								ACTIVE PROJECT
 							</p>
 							<h4 className='font-clash text-lg font-medium text-gray-900 mb-1'>
 								West African Textile Archive
 							</h4>
-							<p className='font-sans text-[11px] text-gray-600'>
+							<p className='font-clash text-[11px] text-gray-600'>
 								3 collaborators &nbsp;•&nbsp; 12 badges created
 							</p>
 						</div>
@@ -261,8 +261,8 @@ const FeaturesSection = () => {
 						{/* Stats Row */}
 						<div className='flex gap-3 mt-3'>
 							{/* Revenue Split */}
-							<div className='flex-1 bg-[#FDFDFD] rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col justify-center'>
-								<p className='font-sans text-[10px] font-semibold text-blue-800 mb-1'>
+							<div className='flex-1  rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col justify-center'>
+								<p className='font-clash text-[10px] font-semibold text-blue-800 mb-1'>
 									Revenue Split
 								</p>
 								<p className='font-clash text-[15px] font-medium text-gray-900 leading-none'>
@@ -271,7 +271,7 @@ const FeaturesSection = () => {
 							</div>
 
 							{/* Earned */}
-							<div className='flex-1 bg-[#FDFDFD] rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col justify-center'>
+							<div className='flex-1 rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col justify-center'>
 								<p className='font-sans text-[10px] font-semibold text-yellow-700 mb-1'>
 									Earned (USDC)
 								</p>
@@ -303,7 +303,7 @@ const FeaturesSection = () => {
 								Lens AI
 							</h3>
 						</div>
-						<p className='text-gray-300 font-sans text-[15px] leading-relaxed max-w-sm'>
+						<p className='text-gray-300 font-clash text-[15px] leading-relaxed max-w-sm'>
 							Your cultural co-pilot. Lens enhances recordings, transcribes oral
 							histories, translates languages, and connects your work to
 							relevant communities. It handles the complexity.
@@ -311,15 +311,15 @@ const FeaturesSection = () => {
 					</div>
 
 					{/* Right Chat UI Section (Exact Image Match) */}
-					<div className='relative z-10 w-full max-w-[420px] mx-auto md:ml-auto bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[2rem] p-6 sm:p-8 shadow-2xl flex flex-col h-[520px]'>
+					<div className='relative z-10 w-full max-w-[420px] mx-auto md:ml-auto bg-white/10 backdrop-blur-4xl border border-white/20 rounded-[2rem] p-6 sm:p-8 shadow-2xl flex flex-col h-[520px]'>
 						{/* Aperture Header Icon */}
 						<div className='mb-6'>
-							<img src='/logo.jpg' alt='Aperture Icon' className='w-8 h-8' />
+							<img src='/Vector .png' alt='Aperture Icon' className='w-8 h-8' />
 						</div>
 
 						{/* Right User Chat Bubble */}
 						<div className='flex justify-end mb-6'>
-							<div className='bg-white/20 backdrop-blur-md border border-white/10 px-5 py-4 rounded-3xl rounded-tr-sm text-[13px] font-sans text-white/90 shadow-lg max-w-[85%] leading-relaxed'>
+							<div className='bg-white/10 border border-white/10 px-5 py-4 rounded-3xl rounded-tr-sm text-[13px] font-clash text-white/90 shadow-lg max-w-[85%] leading-relaxed'>
 								"Enhance this village elder recording and transcribe to
 								English."
 							</div>
@@ -327,7 +327,7 @@ const FeaturesSection = () => {
 
 						{/* Left Lens AI Chat Bubble */}
 						<div className='flex justify-start mb-6'>
-							<div className='bg-white/10 backdrop-blur-md border border-white/10 px-5 py-4 rounded-3xl rounded-tl-sm text-[13px] font-sans text-gray-300 shadow-lg max-w-[90%] leading-relaxed'>
+							<div className='bg-white/10  border border-white/10 px-5 py-4 rounded-3xl rounded-tl-sm text-[13px] font-clash text-gray-300 shadow-lg max-w-[90%] leading-relaxed'>
 								Transcription complete. Detected language: Igbo (Nsukka
 								dialect). I've also found 3 related oral histories in the
 								archive you may want to connect.
@@ -376,12 +376,12 @@ const FeaturesSection = () => {
 					<div className='flex items-center gap-3 mb-4'>
 						{/* Lucide BadgeCheck with orange fill and white checkmark */}
 						<BadgeCheck className='w-8 h-8 text-white fill-[#FF7518]' />
-						<h2 className='font-clash text-2xl font-medium text-gray-900'>
+						<h2 className='font-clash text-xl font-semi-bold text-gray-900'>
 							Community Archives
 						</h2>
 					</div>
 
-					<p className='font-sans text-[15px] text-gray-700 leading-relaxed mb-8'>
+					<p className='font-clash text-[15px] text-gray-700 leading-relaxed mb-8'>
 						A digital home for your culture. Document oral histories, art,
 						dance, food traditions, rituals, crafts, and everyday life. Manage
 						contributions, verify authenticity, and engage your diaspora all
@@ -401,10 +401,10 @@ const FeaturesSection = () => {
 								/>
 							</div>
 							<div>
-								<h4 className='font-clash text-[15px] font-medium text-gray-900 leading-tight'>
+								<h4 className='font-clash text-[15px] font-light text-gray-900 leading-tight'>
 									Maasai Heritage Archive
 								</h4>
-								<p className='font-sans text-[11px] text-gray-500 mt-0.5'>
+								<p className='font-clash text-[11px] text-gray-500 mt-0.5'>
 									Est. 2024 &nbsp;•&nbsp; 100 members
 								</p>
 							</div>
@@ -412,27 +412,27 @@ const FeaturesSection = () => {
 
 						{/* 3-Column Stats Row */}
 						<div className='grid grid-cols-3 gap-3 mb-6'>
-							<div className='bg-white rounded-2xl py-3.5 flex flex-col items-center shadow-sm'>
+							<div className=' rounded-2xl py-3.5 flex flex-col items-center shadow-sm'>
 								<span className='font-clash text-lg font-medium text-gray-900 leading-none mb-1'>
 									342
 								</span>
-								<span className='font-sans text-[11px] text-gray-500'>
+								<span className='font-clash text-[11px] text-gray-500'>
 									Items
 								</span>
 							</div>
-							<div className='bg-white rounded-2xl py-3.5 flex flex-col items-center shadow-sm'>
+							<div className=' rounded-2xl py-3.5 flex flex-col items-center shadow-sm'>
 								<span className='font-clash text-lg font-medium text-gray-900 leading-none mb-1'>
 									28
 								</span>
-								<span className='font-sans text-[11px] text-gray-500'>
+								<span className='font-clash text-[11px] text-gray-500'>
 									Verified
 								</span>
 							</div>
-							<div className='bg-white rounded-2xl py-3.5 flex flex-col items-center shadow-sm'>
+							<div className=' rounded-2xl py-3.5 flex flex-col items-center shadow-sm'>
 								<span className='font-clash text-lg font-medium text-gray-900 leading-none mb-1'>
 									12
 								</span>
-								<span className='font-sans text-[11px] text-gray-500'>
+								<span className='font-clash text-[11px] text-gray-500'>
 									Languages
 								</span>
 							</div>
@@ -440,23 +440,23 @@ const FeaturesSection = () => {
 
 						{/* Content List Items */}
 						<div className='flex flex-col gap-2.5'>
-							<div className='bg-white rounded-xl px-4 py-3 shadow-sm flex items-center gap-3'>
+							<div className=' rounded-xl px-4 py-3 shadow-sm flex items-center gap-3'>
 								<div className='w-1.5 h-1.5 bg-black rounded-full'></div>
-								<span className='font-sans text-[12px] text-gray-800'>
+								<span className='font-clash text-[12px] text-gray-800'>
 									Beadwork patterns (38 items)
 								</span>
 							</div>
 
-							<div className='bg-white rounded-xl px-4 py-3 shadow-sm flex items-center gap-3'>
+							<div className=' rounded-xl px-4 py-3 shadow-sm flex items-center gap-3'>
 								<div className='w-1.5 h-1.5 bg-black rounded-full'></div>
-								<span className='font-sans text-[12px] text-gray-800'>
+								<span className='font-clash text-[12px] text-gray-800'>
 									Migration songs (14 recordings)
 								</span>
 							</div>
 
-							<div className='bg-white rounded-xl px-4 py-3 shadow-sm flex items-center gap-3'>
+							<div className=' rounded-xl px-4 py-3 shadow-sm flex items-center gap-3'>
 								<div className='w-1.5 h-1.5 bg-black rounded-full'></div>
-								<span className='font-sans text-[12px] text-gray-800'>
+								<span className='font-clash text-[12px] text-gray-800'>
 									Cattle branding marks (22 photos)
 								</span>
 							</div>
