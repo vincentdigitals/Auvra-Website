@@ -17,8 +17,7 @@ import {
   ClipboardList,
   Wallet,
   Zap,
-  Lock,
-  Users
+  Lock
 } from 'lucide-react';
 
 const FeaturesSection = () => {
